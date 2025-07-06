@@ -123,16 +123,32 @@ class Application:
         """
         Remove a JSON object from an array in the JSON data.
         """
-        checkpoint_name = input("Enter the checkpoint name: ")
-        index = int(input("Enter the index of the object to remove: "))
-        index_field = input(
-            "Enter the index field (default is 'index'): ") or None
+        print("Available checkpoints pointing to lists:")
+        checkpoints = [
+            checkpoint_name for checkpoint_name, path in self.manager.checkpoints.items()
+            if isinstance(self.manager._get_value(path), list)
+        ]
+        if not checkpoints:
+            print("No checkpoints pointing to lists are available.")
+            return
+
+        for i, checkpoint_name in enumerate(checkpoints):
+            print(f"{i + 1}. {checkpoint_name}")
+
         try:
+            choice = int(input("Select a checkpoint by number: ")) - 1
+            if choice < 0 or choice >= len(checkpoints):
+                print("Invalid choice. Please try again.")
+                return
+
+            checkpoint_name = checkpoints[choice]
+            index = int(input("Enter the index of the object to remove: "))
+            index_field = input("Enter the index field (default is 'index'): ") or "index"
+
             removed_object = self.manager.delete_object_from_array(
                 checkpoint_name, index, index_field=index_field)
             self.manager.save_to_file()
-            print(
-                f"Removed object from '{checkpoint_name}': {removed_object}.")
+            print(f"Removed object from '{checkpoint_name}': {removed_object}.")
         except ValueError as e:
             print(f"Error: {e}")
 

@@ -16,33 +16,27 @@
         "education": [
             {
                 "degree": "SHIT",
-                "field": "fucking",
-                "year": 201,
-                "index": 0
-            },
-            {
-                "degree": "SHIT",
                 "field": "Mathematics",
                 "year": 201,
-                "index": 1
+                "index": 0
             },
             {
                 "degree": "X111XXXXX",
                 "field": "Mathematics",
                 "year": 201,
-                "index": 2
+                "index": 1
             },
             {
                 "degree": "Associate",
                 "field": "Mathematics",
                 "year": 201,
-                "index": 3
+                "index": 2
             },
             {
                 "degree": "XXXXXX",
                 "field": "Mathematics",
                 "year": 201,
-                "index": 4
+                "index": 3
             }
         ]
     },
