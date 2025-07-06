@@ -1,0 +1,8 @@
+{
+    "user_profile_name": "$.user.profile.name",
+    "user_profile_age": "$.user.profile.age",
+    "user_hobbies": "$.user.hobbies",
+    "user_education": "$.user.education",
+    "settings_theme": "$.settings.theme",
+    "settings_notifications_email": "$.settings.notifications.email"
+}
