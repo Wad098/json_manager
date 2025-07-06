@@ -143,6 +143,7 @@ class JSONManager:
                 f"Checkpoint '{checkpoint_name}' does not point to an array.")
 
     def insert_object_to_array_index(self, checkpoint_name, new_object, position=None, index_field="index"):
+        print(f"+++++++++++++++++++++++Inserting object at position {position} with index field '{index_field}'")
         """
         Insert a JSON object into an array at a specified position in the JSON data using a checkpoint name.
         Re-plan the indices of all objects in the array based on the specified index field.
@@ -227,11 +228,7 @@ if __name__ == "__main__":
     # manager.append_object_to_array("user_education", new_object)
     # print(f"Appended object to 'user_education': {new_object}")
 
-    new_object_position = {
-        "degree": "Associate",
-        "field": "Mathematics",
-        "year": 2010
-    }
+    new_object_position = {"degree": "XXXXXX","field": "Mathematics","year": 201}
     for i in range(3):
         manager.insert_object_to_array_index(
             "user_education", new_object_position, position=1, index_field="index")

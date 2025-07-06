@@ -15,262 +15,34 @@
         ],
         "education": [
             {
-                "degree": "Associate",
+                "degree": "SHIT",
+                "field": "fucking",
+                "year": 201,
+                "index": 0
+            },
+            {
+                "degree": "SHIT",
                 "field": "Mathematics",
-                "year": 2010,
+                "year": 201,
+                "index": 1
+            },
+            {
+                "degree": "X111XXXXX",
+                "field": "Mathematics",
+                "year": 201,
                 "index": 2
             },
             {
                 "degree": "Associate",
                 "field": "Mathematics",
-                "year": 2010,
-                "index": 2
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 2
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
+                "year": 201,
                 "index": 3
             },
             {
-                "degree": "Associate",
+                "degree": "XXXXXX",
                 "field": "Mathematics",
-                "year": 2010,
+                "year": 201,
                 "index": 4
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 5
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 6
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 7
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 8
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 9
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 10
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 11
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 12
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 13
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 14
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 15
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 16
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 17
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 18
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 19
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 20
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 21
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 22
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 23
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 24
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 25
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 26
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 27
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 28
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 29
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 30
-            },
-            {
-                "degree": "XXXXadasd",
-                "field": "Masdasdasd",
-                "year": 2011231230,
-                "index": 31
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 32
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 33
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 34
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 35
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 36
-            },
-            {
-                "degree": "Associate",
-                "field": "Mathematics",
-                "year": 2010,
-                "index": 37
-            },
-            {
-                "index": 38,
-                "degree": "PhD",
-                "field": "Artificial Intelligence",
-                "year": 2022
-            },
-            {
-                "index": 39,
-                "degree": "PhD",
-                "field": "Artificial Intelligence",
-                "year": 2022
-            },
-            {
-                "index": 40,
-                "degree": "PhD",
-                "field": "Artificial Intelligence",
-                "year": 2022
-            },
-            {
-                "index": 41,
-                "degree": "PhD",
-                "field": "Artificial Intelligence",
-                "year": 2022
-            },
-            {
-                "index": 42,
-                "degree": "PhD",
-                "field": "Artificial Intelligence",
-                "year": 2022
             }
         ]
     },

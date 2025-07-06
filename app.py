@@ -78,44 +78,20 @@ class Application:
             print("Invalid input. Please enter a number.")
         except Exception as e:
             print(f"Error: {e}")
-    # def add_checkpoint(self):
-    #     """
-    #     Add a checkpoint by selecting a path from the JSON structure.
-    #     """
-    #     def print_json_structure(data, prefix=""):
-    #         """
-    #         Recursively print the JSON structure in a readable format.
-    #         """
-    #         if isinstance(data, dict):
-    #             for key, value in data.items():
-    #                 print(f"{prefix}{key}/")
-    #                 print_json_structure(value, prefix + key + "/")
-    #         elif isinstance(data, list):
-    #             print(f"{prefix}[Array]")
-    #         else:
-    #             print(f"{prefix}[Value: {data}]")
 
-    #     print("Current JSON structure:")
-    #     print_json_structure(self.manager.data)
-
-    #     try:
-    #         path = input("Enter the JSON path (e.g., user/profile/name): ")
-    #         checkpoint_name = input("Enter the checkpoint name: ")
-    #         # Convert user/profile/name to $.user.profile.name
-    #         json_path = "$." + path.replace("/", ".")
-    #         self.manager.add_checkpoint(checkpoint_name, json_path)
-    #         self.manager.save_checkpoints()
-    #         print(
-    #             f"Checkpoint '{checkpoint_name}' added for path '{json_path}'.")
-    #     except Exception as e:
-    #         print(f"Error: {e}")
-
-    def update_value(self):
-        """1
-        Update a value in the JSON data.
+    def append_object(self):
         """
-        print("Available checkpoints:")
-        checkpoints = list(self.manager.checkpoints.keys())
+        Append a JSON object to an array in the JSON data.
+        """
+        print("Available checkpoints pointing to lists:")
+        checkpoints = [
+            checkpoint_name for checkpoint_name, path in self.manager.checkpoints.items()
+            if isinstance(self.manager._get_value(path), list)
+        ]
+        if not checkpoints:
+            print("No checkpoints pointing to lists are available.")
+            return
+
         for i, checkpoint_name in enumerate(checkpoints):
             print(f"{i + 1}. {checkpoint_name}")
 
@@ -126,30 +102,14 @@ class Application:
                 return
 
             checkpoint_name = checkpoints[choice]
-            new_value = input(f"Enter the new value for '{checkpoint_name}': ")
-            old_value, updated_value = self.manager.update_value(
-                checkpoint_name, new_value)
-            self.manager.save_to_file()
-            print(
-                f"Updated '{checkpoint_name}' from '{old_value}' to '{updated_value}'.")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-        except Exception as e:
-            print(f"Error: {e}")
-
-    def append_object(self):
-        """
-        Append a JSON object to an array in the JSON data.
-        """
-        checkpoint_name = input("Enter the checkpoint name: ")
-        try:
             new_object = json.loads(
                 input("Enter the JSON object to append (e.g., {\"key\": \"value\"}): "))
             index_field = input(
-                "Enter the index field (default is 'index'): ") or None
-            position = input(
-                "Enter the position to insert the object (leave empty for end): ") or None
-            # self.manager.append_object_to_array(checkpoint_name, new_object)
+                "Enter the index field (default is 'index'): ") or "index"
+            position_input = input(
+                "Enter the position to insert the object (leave empty for end): ")
+            position = int(position_input) if position_input.strip() else None
+
             self.manager.insert_object_to_array_index(
                 checkpoint_name, new_object, position=position, index_field=index_field)
             self.manager.save_to_file()
