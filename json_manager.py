@@ -86,6 +86,22 @@ class JSONManager:
         """
         path = self._resolve_checkpoint(checkpoint_name)
         old_value = self._get_value(path)
+
+        # Attempt to convert new_value to the same type as old_value
+        try:
+            if isinstance(old_value, (int, float)):
+                new_value = type(old_value)(new_value)  # Convert to int/float if old_value is numeric
+            elif isinstance(old_value, str):
+                new_value = str(new_value)  # Convert to string if old_value is a string
+            else:
+                raise ValueError(
+                    f"Unsupported type: Cannot update '{checkpoint_name}' with type {type(old_value).__name__}."
+                )
+        except ValueError:
+            raise ValueError(
+                f"Type mismatch: Cannot update '{checkpoint_name}' from {type(old_value).__name__} to {type(new_value).__name__}."
+            )
+
         self._set_value(path, new_value)
         return old_value, new_value
 

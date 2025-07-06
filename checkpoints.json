@@ -4,5 +4,6 @@
     "user_hobbies": "$.user.hobbies",
     "user_education": "$.user.education",
     "settings_theme": "$.settings.theme",
-    "settings_notifications_email": "$.settings.notifications.email"
+    "settings_notifications_email": "$.settings.notifications.email",
+    "hello": "$.user.profile.address.city"
 }
